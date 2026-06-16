@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Performance Monitor</title>
+</head>
+<body>
+
+<h1>API Performance Monitor</h1>
+
+<form method="POST">
+
+    <input
+        type="text"
+        name="url"
+        placeholder="https://api.github.com"
+        required>
+
+    <button type="submit">
+        Check API
+    </button>
+
+</form>
+
+{% if result %}
+
+<h2>Results</h2>
+
+<p>
+Status Code:
+{{ result.status_code }}
+</p>
+
+<p>
+Response Time:
+{{ result.response_time }} ms
+</p>
+
+{% endif %}
+
+</body>
+</html>
